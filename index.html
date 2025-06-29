@@ -3,24 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home</title>
-   <meta name="description" content="Elizah Wirenu's official portfolio site – featuring telecom fieldwork, software development, industrial training, and engineering projects in Papua New Guinea." />
-  <meta name="keywords" content="My Site - Elizah Wirenu" />
-  <meta name="author" content="Elizah Wirenu" />
+  <title>Home – Elizah Wirenu</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    *{
+      margin: 0; padding: 0; box-sizing: border-box;
     }
-
-    html, body {
+    body, html {
       height: 100%;
       font-family: 'Roboto', sans-serif;
-      background: url('03.jpeg') no-repeat center center fixed;
+      background: url('Unitech Background.jpg') no-repeat center center fixed;
       background-size: cover;
+      color: #2c3e50;
     }
 
     .top-bar {
@@ -28,104 +23,160 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 60px;
+      height: 65px;
       background-color: #2c3e50;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
       z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     }
 
     .menu-icon {
       position: absolute;
       left: 20px;
-      font-size: 24px;
+      font-size: 22px;
+      color: white;
       cursor: pointer;
     }
 
     .top-title {
-      font-size: 22px;
-      font-weight: bold;
+      color: white;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    nav.side-menu {
+      position: fixed;
+      top: 65px;
+      left: 0;
+      background-color: #34495e;
+      width: 180px;
+      height: calc(100% - 65px);
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: transform 0.3s ease;
+      transform: translateX(0);
+      z-index: 999;
+    }
+
+    nav.side-menu a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      font-weight: 500;
+      border-left: 4px solid transparent;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    nav.side-menu a:hover,
+    nav.side-menu a.active {
+      background-color: #1abc9c;
+      border-left: 4px solid #16a085;
     }
 
     main {
-      padding-top: 80px;
-      padding-bottom: 40px;
+      margin-left: 200px;
+      padding-top: 90px;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
     .search-icon {
-      margin-bottom: 20px;
+      margin: 20px;
     }
 
     .search-icon i {
-      font-size: 24px;
+      font-size: 26px;
       color: #2c3e50;
       cursor: pointer;
     }
 
     .section {
-      background: rgba(255, 255, 255, 0.9);
+      background: white;
       width: 90%;
-      max-width: 800px;
-      margin: 20px;
+      max-width: 900px;
+      margin: 25px 0;
       padding: 30px;
-      border-radius: 12px;
+      border-radius: 10px;
       text-align: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
     }
 
     .section h2 {
+      font-size: 1.8rem;
       margin-bottom: 15px;
-      color: #2c3e50;
+      color: #34495e;
     }
 
     .section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
       margin-bottom: 20px;
-      color: #333;
     }
 
     .btn {
-      padding: 10px 25px;
+      padding: 12px 30px;
       background-color: #2c3e50;
       color: white;
       border: none;
       border-radius: 25px;
       font-size: 1em;
       cursor: pointer;
-      transition: 0.3s ease;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      text-decoration: none;
     }
 
     .btn:hover {
       background-color: #1abc9c;
-      color: #fff;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 18px 10px;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 700px) {
+      nav.side-menu {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 0;
+        transform: translateX(0) !important;
+      }
+
+      main {
+        margin-left: 0;
+        padding-top: 120px;
+      }
     }
 
     @media (max-width: 600px) {
       .top-title {
-        font-size: 18px;
+        font-size: 20px;
       }
 
       .section {
         padding: 20px;
       }
     }
-    footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #2c3e50;
-  color: white;
-  text-align: center;
-  padding: 15px 10px;
-  font-size: 0.9rem;
-  z-index: 1000;
-}
-
   </style>
 </head>
 <body>
@@ -137,33 +188,38 @@
     <div class="top-title">Home</div>
   </header>
 
+  <nav class="side-menu" id="sideMenu">
+    <a href="index.html" >Home</a>
+    <a href="about.html">About Me</a>
+    <a href="projects.html">Projects/Portfolio</a>
+  </nav>
+
   <main>
     <div class="search-icon">
-      <i class="fas fa-search"></i>
+      <i class="fas fa-search" title="Search"></i>
     </div>
 
     <section class="section" id="home">
-      <h2>Welcome to My Website</h2>
-      <p>This is the home section of an extraordinary site. Click below to learn more about me or explore my work.</p>
+      <h2>Welcome to My Personal Website</h2>
+      <p>Explore my professional background, engineering projects, software ideas, and personal journey as an aspiring engineer in Papua New Guinea.</p>
     </section>
 
     <section class="section" id="about">
       <h2>About Me</h2>
-      <p>Learn more about who I am, my journey, my values, and the things I’m passionate about.</p>
-      <button class="btn" onclick="window.location.href='about.html'">Go to About Me</button>
+      <p>I’m Elizah Wirenu – a passionate Electrical and Communications Engineering student with hands-on experience in telecom, maintenance, and software development.</p>
+      <a class="btn" href="about.html">Go to About Me</a>
     </section>
 
     <section class="section" id="portfolio">
-      <h2>Projects / Portfolio / Work</h2>
-      <p>Check out some of the awesome projects I’ve worked on. From development to design, it’s all here.</p>
-      <button class="btn" onclick="window.location.href='projects.html'">View Projects</button>
+      <h2>Projects & Portfolio</h2>
+      <p>Discover my training experiences, technical field work, and app concepts built with real-world needs in mind.</p>
+      <a class="btn" href="projects.html">View Projects</a>
     </section>
   </main>
 
- 
-  <footer style="background-color: #2c3e50; color: white; text-align: center; padding: 20px; margin-top: 40px;">
+  <footer>
     &copy; 2025 Elizah Wirenu. All rights reserved.
-  </footer>   
-   
+  </footer>
+
 </body>
 </html>
