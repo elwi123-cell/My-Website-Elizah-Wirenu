@@ -4,76 +4,100 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Background – Elizah Wirenu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Roboto', sans-serif;
       margin: 0;
-      background: #f4f6f9;
-      color: #2c3e50;
-      padding: 60px 20px;
+      background: linear-gradient(135deg, #f4f6f9 0%, #e0e6f2 100%);
+      color: #1f2d3d;
+      padding: 70px 20px;
+      line-height: 1.6;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 950px;
       margin: auto;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-      padding: 40px;
+      background: rgba(255,255,255,0.95);
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      padding: 50px;
+      backdrop-filter: blur(8px);
+      animation: fadeIn 1s ease-in-out;
     }
 
     h1 {
       text-align: center;
-      margin-bottom: 30px;
-      color: #1a1a1a;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: #0d1a2b;
+      letter-spacing: 1px;
     }
 
     section {
-      margin-bottom: 30px;
+      margin-bottom: 35px;
     }
 
     h2 {
       color: #1abc9c;
-      border-bottom: 2px solid #1abc9c;
+      font-size: 1.4rem;
+      border-bottom: 3px solid #1abc9c;
       padding-bottom: 8px;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
+      display: inline-block;
+      letter-spacing: 0.5px;
     }
 
     p, li {
-      font-size: 1.05em;
-      line-height: 1.6;
+      font-size: 1.05rem;
+      color: #34495e;
     }
 
     ul {
-      padding-left: 20px;
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 8px;
     }
 
     .highlight {
       font-weight: 600;
+      color: #0d1a2b;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 600px) {
       body {
-        padding: 30px 10px;
+        padding: 40px 15px;
       }
-
       .container {
-        padding: 20px;
+        padding: 25px;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      h2 {
+        font-size: 1.2rem;
       }
     }
-    footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #2c3e50;
-  color: white;
-  text-align: center;
-  padding: 15px 10px;
-  font-size: 0.9rem;
-  z-index: 1000;
-}
 
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 0.9rem;
+      z-index: 1000;
+    }
   </style>
 </head>
 <body>
@@ -126,11 +150,9 @@
       </ul>
     </section>
   </div>
-    
-    
-  <footer style="background-color: #2c3e50; color: white; text-align: center; padding: 20px; margin-top: 40px;">
+
+  <footer>
     &copy; 2025 Elizah Wirenu. All rights reserved.
-  </footer>  
-    
+  </footer>
 </body>
 </html>
