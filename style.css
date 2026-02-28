@@ -76,13 +76,38 @@ body, html {
 ================================= */
 
 .background {
-    background: linear-gradient(rgba(15,23,42,0.75), rgba(15,23,42,0.75)),
-                url('images/your-background.jpg') no-repeat center center/cover;
+    background: url('images/your-background.jpg') no-repeat center center/cover;
     padding-top: 120px;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    filter: brightness(1.3); /* Increase brightness (1 = normal, 1.3 = 30% brighter) */
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.2); /* Optional dark overlay for contrast */
+    z-index: -1;
+}
+
+/* ===============================
+   TEXT STYLE IMPROVEMENTS FOR CONTRAST
+================================= */
+
+h1, h2, p {
+    color: #ffffff; /* Ensuring text stands out */
+}
+
+/* ===============================
+   TEXT SHADOW FOR IMPROVED READABILITY
+================================= */
+
+h1, h2, p {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4); /* Add shadow for readability */
 }
 
 /* ===============================
