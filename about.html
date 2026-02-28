@@ -3,109 +3,149 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Me</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <title>About Me | Elizah Wirenu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
   <style>
-    /* Reset */
     * {
-      margin: 0; padding: 0; box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
+
     body, html {
       height: 100%;
       font-family: 'Roboto', sans-serif;
-      background: url('Alone.jpg') no-repeat center center fixed;
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), 
+                  url('Alone.jpg') no-repeat center center fixed;
       background-size: cover;
-      color: #2c3e50;
+      color: #1f2d3d;
     }
+
     .top-bar {
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 60px;
-      background-color: #2c3e50;
-      display: flex; align-items: center; justify-content: center;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background: linear-gradient(90deg, #1f2d3d, #2c3e50);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: white;
       z-index: 1000;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
     }
+
     .menu-icon {
       position: absolute;
       left: 20px;
-      font-size: 24px;
+      font-size: 22px;
       cursor: pointer;
       color: white;
+      transition: transform 0.3s ease;
     }
+
+    .menu-icon:hover {
+      transform: scale(1.1);
+    }
+
     .top-title {
       font-weight: 700;
-      font-size: 22px;
+      font-size: 20px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
+
     nav.side-menu {
       position: fixed;
       top: 60px;
       left: 0;
-      background-color: #34495e;
-      width: 180px;
+      background: linear-gradient(180deg, #2c3e50, #1f2d3d);
+      width: 200px;
       height: calc(100% - 60px);
-      padding-top: 20px;
+      padding-top: 25px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
       transition: transform 0.3s ease;
       transform: translateX(0);
       z-index: 999;
     }
+
     nav.side-menu a {
       color: white;
       text-decoration: none;
-      padding: 10px 15px;
+      padding: 12px 20px;
       font-weight: 500;
       border-left: 4px solid transparent;
-      transition: background-color 0.3s, border-color 0.3s;
+      transition: all 0.3s ease;
     }
+
     nav.side-menu a:hover,
     nav.side-menu a.active {
-      background-color: #1abc9c;
-      border-left: 4px solid #16a085;
+      background: rgba(26, 188, 156, 0.2);
+      border-left: 4px solid #1abc9c;
+      padding-left: 25px;
     }
+
     main {
-      margin-left: 200px;
-      padding: 80px 40px 40px;
-      max-width: 900px;
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      margin-left: 220px;
+      padding: 100px 50px 80px;
+      max-width: 950px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      animation: fadeIn 1s ease;
     }
+
     section {
-      margin-bottom: 40px;
+      margin-bottom: 45px;
     }
+
     section h2 {
-      margin-bottom: 10px;
-      color: #2c3e50;
+      margin-bottom: 12px;
       font-size: 1.8rem;
-      border-bottom: 2px solid #1abc9c;
-      padding-bottom: 5px;
-      max-width: fit-content;
+      font-weight: 700;
+      border-bottom: 3px solid #1abc9c;
+      padding-bottom: 6px;
+      display: inline-block;
     }
+
     section p {
       font-size: 1.1rem;
-      line-height: 1.5;
-      margin-bottom: 15px;
+      line-height: 1.6;
+      margin-bottom: 18px;
       color: #34495e;
     }
+
     .btn {
       display: inline-block;
-      padding: 10px 25px;
-      background-color: #2c3e50;
+      padding: 10px 28px;
+      background: linear-gradient(90deg, #1f2d3d, #1abc9c);
       color: white;
       border: none;
-      border-radius: 25px;
-      font-size: 1em;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      font-weight: 500;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: all 0.3s ease;
       text-decoration: none;
+      letter-spacing: 0.5px;
     }
+
     .btn:hover {
-      background-color: #1abc9c;
-      color: #fff;
+      background: linear-gradient(90deg, #1abc9c, #16a085);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 700px) {
@@ -118,30 +158,32 @@
         padding: 10px 0;
         transform: translateX(0) !important;
       }
+
       main {
         margin-left: 0;
-        padding: 100px 20px 20px;
+        padding: 120px 20px 100px;
       }
+
       section {
         margin-bottom: 30px;
       }
-      
     }
-    footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #2c3e50;
-  color: white;
-  text-align: center;
-  padding: 15px 10px;
-  font-size: 0.9rem;
-  z-index: 1000;
-}
 
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 0.9rem;
+      z-index: 1000;
+    }
   </style>
 </head>
+
 <body>
 
   <header class="top-bar">
@@ -153,31 +195,40 @@
 
   <nav class="side-menu" id="sideMenu">
     <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="projects.html">Projects/Portfolio</a>
+    <a href="about.html" class="active">About Me</a>
+    <a href="projects.html">Projects / Portfolio</a>
   </nav>
 
   <main>
     <section id="biography">
-      <h2>Short Biography</h2>
-      <p>Hello! I am Elizah Wirenu, a passionate individual eager to create meaningful experiences through technology and design.</p>
+      <h2>Professional Biography</h2>
+      <p>
+        Hello. I am <strong>Elizah Wirenu</strong> — an aspiring engineer and technology innovator committed to shaping transformative digital solutions. 
+        My work and vision focus on leveraging engineering excellence to create sustainable, forward-thinking technological ecosystems.
+      </p>
       <a href="biography.html" class="btn">Read More</a>
     </section>
 
     <section id="background">
       <h2>Background, Interests & Education</h2>
-      <p>I come from a rich cultural background, with a deep interest in communications engineering and software development. Currently pursuing a Bachelor of Engineering in Electrical and Communications Engineering.</p>
+      <p>
+        Rooted in a rich cultural heritage and driven by a passion for communications engineering, I am currently pursuing a 
+        <strong>Bachelor of Engineering in Electrical & Communications Engineering</strong>. 
+        My interests span software systems, telecommunications infrastructure, and digital innovation strategy.
+      </p>
       <a href="background.html" class="btn">Learn More</a>
     </section>
 
     <section id="skills">
-      <h2>Key Skills & Passions</h2>
-      <p>Skilled in problem-solving, project management, and passionate about coding, telecommunications, and sustainable technology solutions.</p>
+      <h2>Core Skills & Vision</h2>
+      <p>
+        My competencies include analytical problem-solving, strategic project coordination, and software development. 
+        I am particularly passionate about telecommunications advancement, digital transformation, and building resilient, scalable systems for the future.
+      </p>
       <a href="skills.html" class="btn">Explore Skills</a>
     </section>
   </main>
 
-  
   <script>
     function toggleMenu() {
       const menu = document.getElementById('sideMenu');
@@ -188,7 +239,7 @@
       }
     }
   </script>
-  
+
   <footer style="background-color: #2c3e50; color: white; text-align: center; padding: 20px; margin-top: 40px;">
     &copy; 2025 Elizah Wirenu. All rights reserved.
   </footer>
