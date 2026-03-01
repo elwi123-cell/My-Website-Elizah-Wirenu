@@ -90,7 +90,7 @@ body, html {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.2); /* Optional dark overlay for contrast */
+    background: rgba(0, 5, 0, 1.2); /* Optional dark overlay for contrast */
     z-index: -1;
 }
 
